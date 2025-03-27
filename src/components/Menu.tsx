@@ -1,4 +1,3 @@
-// import { role } from "@/lib/data";
 import { role } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -91,11 +90,6 @@ const menuItems = [
         href: "/list/announcements",
         visible: ["admin", "teacher", "student", "parent"],
       },
-    ],
-  },
-  {
-    title: "PROFESSIONAL ATTENTION",
-    items: [
       {
         icon: "/appointment.png",
         label: "Professional Appointment",
@@ -122,6 +116,7 @@ const menuItems = [
       },
     ],
   },
+
   {
     title: "OTHER",
     items: [
