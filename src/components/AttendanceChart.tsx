@@ -3,7 +3,7 @@ import Image from "next/image";
 import {
   BarChart,
   Bar,
-  Rectangle,
+  // Rectangle,
   XAxis,
   YAxis,
   CartesianGrid,
