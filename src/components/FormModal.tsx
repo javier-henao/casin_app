@@ -46,7 +46,7 @@ const FormModal = ({
   type: "create" | "update" | "delete";
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data?: any;
-  id?: number;
+  id?: string;
 }) => {
   const size = type === "create" ? "w-8 h-8" : "w-7 h-7";
   const bgColor =
