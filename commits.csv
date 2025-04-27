@@ -1,0 +1,23 @@
+bf644f9,javierhenaohe,2025-04-27,Se visualiza el valor real de data en tarjetas de admins, students, teachers, parents
+5f1a0b5,javierhenaohe,2025-04-27,Actualizacion: se realiza commit de archivo utils.ts
+073df9c,javierhenaohe,2025-04-27,Obtencion de DATA segun rol de usuario
+c04e30c,javierhenaohe,2025-04-15,Se define regla de acceso y seguridad
+49dbc3e,javierhenaohe,2025-04-03,Implementacion: sign-in con clerk usuario-contraseña
+17bc99b,javierhenaohe,2025-04-03,Implementacion: announcements-events con BD y enlaces internos. Actualizacion en Menu
+878fd24,javierhenaohe,2025-04-03,Implementacion: Assignmets-Exams-Results con BD y enlaces internos
+e7abbae,javierhenaohe,2025-04-02,Implementacion conecion BD con clases-lessons-parents-students-subjects-teachers
+d23615f,javierhenaohe,2025-04-02,Implementacion busqueda en Teachers
+96c3196,javierhenaohe,2025-04-01,Inicia Obtencion de datos desde BD (Teachers), Enlace Prisma Pagination, Uso Prisma Studio para ver BD en puerto 5432
+cce7479,javierhenaohe,2025-04-01,Modificacion Archivos: Prisma, Package- Implementacion: Prisma, Docker, Postgres, Seed (semilla de datos) - Visualizacion Prisma Studio
+7ff88ba,javierhenaohe,2025-03-27,Implemntacion: ORM Prisma, modelado inicial DB, notas.md
+6b370d7,javierhenaohe,2025-03-27,Inicio de funcionalidades Backend
+1a6b81d,javierhenaohe,2025-03-26,Actualizacion Front-End
+0cfeab4,javierhenaohe,2025-03-14,Finaliza Pagina Student y Teacher, se agrega BigCalendar y se mejora stilos css
+f43d728,javierhenaohe,2025-03-10,Guardando cambios antes de cambiar a main
+acb5f9b,javierhenaohe,2025-03-10,Finalizado FrontEnd DashBoard Admin
+1e25c2b,javierhenaohe,2025-03-07,Creacion de Grafico de Barras - Calendario - Mensajes de Eventos
+b17d9b4,javierhenaohe,2025-03-03,Creacion de UseCard y CountChart
+75e6a83,javierhenaohe,2025-02-28,Creacion de Menu y NavBar
+da0d408,javierhenaohe,2025-02-24,Inicio APP
+aed9151,javierhenaohe,2025-02-24,first commit
+3121acb,javierhenaohe,2025-02-24,first commit
