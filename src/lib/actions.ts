@@ -188,7 +188,7 @@ export const updateTeacher = async (
     return { success: false, error: true };
   }
   try {
-    const clerk = await clerkClient(); // ← esto es obligatorio
+    const clerk = await clerkClient();
     await clerk.users.updateUser(data.id, {
       // const user = await clerkClient.users.updateUser(data.id, {
       username: data.username,
@@ -266,9 +266,10 @@ export const createStudent = async (
       return { success: false, error: true };
     }
 
-    const clerk = await clerkClient();
-    const user = await clerk.users.createUser({
-      // const user = await clerkClient.users.createUser({
+    // const user = await clerkClient.users.createUser({
+    const client = await clerkClient();
+    const user = await client.users.createUser({
+      emailAddress: [data.email as string],
       username: data.username,
       password: data.password,
       firstName: data.name,
@@ -299,10 +300,10 @@ export const createStudent = async (
     return { success: true, error: false };
   } catch (err) {
     console.log(err);
+    // console.error(JSON.stringify(err, null, 2)); // Muestra detalle real del error
     return { success: false, error: true };
   }
 };
-
 export const updateStudent = async (
   currentState: CurrentState,
   data: StudentSchema
@@ -311,7 +312,7 @@ export const updateStudent = async (
     return { success: false, error: true };
   }
   try {
-    const clerk = await clerkClient(); // 👈 esto es esencial
+    const clerk = await clerkClient();
     await clerk.users.updateUser(data.id, {
       // const user = await clerkClient.users.updateUser(data.id, {
       username: data.username,
@@ -357,7 +358,6 @@ export const deleteStudent = async (
   try {
     const clerk = await clerkClient();
     await clerk.users.deleteUser(id);
-    // await clerkClient.users.deleteUser(id);
 
     await prisma.student.delete({
       where: {
@@ -365,7 +365,7 @@ export const deleteStudent = async (
       },
     });
 
-    // revalidatePath("/list/students");
+    // revalidatePath("/list/teachers");
     return { success: true, error: false };
   } catch (err) {
     console.log(err);

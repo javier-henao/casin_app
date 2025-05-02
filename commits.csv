@@ -1,3 +1,7 @@
+b805ff6,javierhenaohe,2025-04-30 19:23:26 -0500,Actualizacion pagina crear Teacher
+84de0b9,javierhenaohe,2025-04-29 14:21:59 -0500,Actualizacion funcionalidades para obtener data de BD en clases, teacher y guardar imagenes usando interfaz externa -Cloudinary-
+ff69a1b,javierhenaohe,2025-04-28 04:47:09 -0500,Actualizacion BigCalendar, se agrega programacion recurrente
+b9e552a,javierhenaohe,2025-04-28 02:42:39 -0500,Se visualiza el dato real desde la BD en Announcements
 c1de064,javierhenaohe,2025-04-28 02:23:18 -0500,Se visualiza el dato real desde la BD en los Events
 0d00f91,javierhenaohe,2025-04-27 15:44:34 -0500,Se visualiza el valor real de data en grafica Attendance
 5240119,javierhenaohe,2025-04-27 15:16:19 -0500,Se visualiza el valor real de data en grafica Student

@@ -2,13 +2,11 @@ import FormContainer from "@/components/FormContainer";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
-
 import prisma from "@/lib/prisma";
 import { ITEM_PER_PAGE } from "@/lib/settings";
 import { Class, Prisma, Student } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
-
 import { auth } from "@clerk/nextjs/server";
 
 type StudentList = Student & { class: Class };
@@ -20,7 +18,6 @@ const StudentListPage = async ({
 }) => {
   const { sessionClaims } = await auth();
   const role = (sessionClaims?.metadata as { role?: string })?.role;
-
   const columns = [
     {
       header: "Info",
@@ -86,9 +83,9 @@ const StudentListPage = async ({
             </button>
           </Link>
           {role === "admin" && (
-            // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
-            //   <Image src="/delete.png" alt="" width={16} height={16} />
-            // </button>
+            // // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
+            // //   <Image src="/delete.png" alt="" width={16} height={16} />
+            //// </button>
             <FormContainer table="student" type="delete" id={item.id} />
           )}
         </div>
@@ -96,9 +93,12 @@ const StudentListPage = async ({
     </tr>
   );
 
-  const { page, ...queryParams } = searchParams;
-
+  const resolvedSearchParams = await searchParams;
+  const { page, ...queryParams } = resolvedSearchParams;
   const p = page ? parseInt(page) : 1;
+  // const { page, ...queryParams } = searchParams;
+
+  // const p = page ? parseInt(page) : 1;
 
   // URL PARAMS CONDITION
 
@@ -154,9 +154,9 @@ const StudentListPage = async ({
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
             {role === "admin" && (
-              // <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-              //   <Image src="/plus.png" alt="" width={14} height={14} />
-              // </button>
+              //// <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
+              ////   <Image src="/plus.png" alt="" width={14} height={14} />
+              //// </button>
               <FormContainer table="student" type="create" />
             )}
           </div>

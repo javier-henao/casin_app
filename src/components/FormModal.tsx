@@ -39,9 +39,9 @@ const deleteActionMap = {
 const TeacherForm = dynamic(() => import("./forms/TeacherForm"), {
   loading: () => <h1>Loading...</h1>,
 });
-// const StudentForm = dynamic(() => import("./forms/StudentForm"), {
-//   loading: () => <h1>Loading...</h1>,
-// });
+const StudentForm = dynamic(() => import("./forms/StudentForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
 const SubjectForm = dynamic(() => import("./forms/SubjectForm"), {
   loading: () => <h1>Loading...</h1>,
 });
@@ -87,14 +87,14 @@ const forms: {
       relatedData={relatedData}
     />
   ),
-  // student: (setOpen, type, data, relatedData) => (
-  //   <StudentForm
-  //     type={type}
-  //     data={data}
-  //     setOpen={setOpen}
-  //     relatedData={relatedData}
-  //   />
-  // ),
+  student: (setOpen, type, data, relatedData) => (
+    <StudentForm
+      type={type}
+      data={data}
+      setOpen={setOpen}
+      relatedData={relatedData}
+    />
+  ),
   exam: (setOpen, type, data, relatedData) => (
     <ExamForm
       type={type}
