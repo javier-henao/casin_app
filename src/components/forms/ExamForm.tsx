@@ -6,14 +6,14 @@ import InputField from "../InputField";
 import {
   examSchema,
   ExamSchema,
-  subjectSchema,
-  SubjectSchema,
+  // subjectSchema,
+  // SubjectSchema,
 } from "@/lib/formValidationSchemas";
 import {
   createExam,
-  createSubject,
+  // createSubject,
   updateExam,
-  updateSubject,
+  // updateSubject,
 } from "@/lib/actions";
 import { useFormState } from "react-dom";
 import { Dispatch, SetStateAction, useEffect } from "react";
@@ -27,8 +27,10 @@ const ExamForm = ({
   relatedData,
 }: {
   type: "create" | "update";
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data?: any;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   relatedData?: any;
 }) => {
   const {
